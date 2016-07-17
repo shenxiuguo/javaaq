@@ -1,5 +1,7 @@
 package com.shenxiuguo.QA.java.language.basic;
 
+import java.math.BigInteger;
+
 /**
  * 八类基本数据类型
  * 1.byte<br/>
@@ -72,6 +74,15 @@ public class PrimitiveData {
 	/**
 	 * 基础类型文本赋值<br/>
 	 * 一些不常用的赋值方式。
+	 * 0b1000:二进制
+	 * 010:八进制
+	 * 8:十进制
+	 * 0xF:16进制
+	 * _ : 分隔符，有利于月度浏览
+	 * f F : 浮点数后缀
+	 * p : 
+	 * d D : double后缀
+	 * e E : 科学计数分隔符 (10的指数)
 	 */
 	public void primitiveValueAssignment() {
 		byte_var = 0;
@@ -98,6 +109,7 @@ public class PrimitiveData {
 		float_var = 0.0f;
 		float_var = 0.0F;
 		float_var = 1.234e2F;
+		float_var = 0x1.0p-126f;
 		
 		double_var = 0.0;
 		double_var = 0.0d;
@@ -122,6 +134,9 @@ public class PrimitiveData {
 	 * MAX_VALUE : 最大值
 	 * MIN_VALUE : 最小值
 	 * BYTES : 对应的字节数
+	 * SIZE : bit位数，占用多少位，二进制位数
+	 * MAX_EXPONENT:最大指数值
+	 * MIN_EXPONENT:最小指数值
 	 */
 	public void specialValue() {
 		byte_var = Byte.MAX_VALUE;
@@ -135,15 +150,104 @@ public class PrimitiveData {
 		System.out.println("-0b1000_0000:" + -0b1000_0000);
 		System.out.println("-0x80:" + -0x80);
 		System.out.println("Byte.BYTES:" + Byte.BYTES);
+		System.out.println();
 		
 		short_var = Short.MAX_VALUE;
 		short_var = Short.MIN_VALUE;
 		short_var = Short.BYTES;
 		System.out.println("Short.MAX_VALUE:" + Short.MAX_VALUE);
 		System.out.println("0b01111111_1111111:" + 0b01111111_11111111);
+		System.out.println("0x7FFF:" + 0x7FFF);
+		System.out.println("077777:" + 077777);
 		System.out.println("Short.MIN_VALUE:" + Short.MIN_VALUE);
-		System.out.println("-0b10000000_00000000" + -0b10000000_00000000);
+		System.out.println("-0b10000000_00000000:" + -0b10000000_00000000);
+		System.out.println("-0x8000:" + -0x8000);
 		System.out.println("Short.BYTES:" + Short.BYTES);
+		System.out.println();
+		
+		int_var = Integer.MAX_VALUE;
+		int_var = Integer.MIN_VALUE;
+		int_var = Integer.BYTES;
+		int_var = Integer.SIZE;
+		System.out.println("Integer.MAX_VALUE:" + Integer.MAX_VALUE);
+		System.out.println("Integer.toHexString(Integer.MAX_VALUE):0x" + Integer.toHexString(Integer.MAX_VALUE));
+		System.out.println("Integer.toBinaryString(Integer.MAX_VALUE)0b:" + Integer.toBinaryString(Integer.MAX_VALUE));
+		System.out.println("Integer.toOctalString(Integer.MAX_VALUE):0" + Integer.toOctalString(Integer.MAX_VALUE));
+		System.out.println("Integer.MIN_VALUE:" + Integer.MIN_VALUE);
+		System.out.println("Integer.toHexString(Integer.MIN_VALUE):0x" + Integer.toHexString(Integer.MIN_VALUE));
+		System.out.println("Integer.toBinaryString(Integer.MIN_VALUE)0b:" + Integer.toBinaryString(Integer.MIN_VALUE));
+		System.out.println("Integer.toOctalString(Integer.MIN_VALUE):0" + Integer.toOctalString(Integer.MIN_VALUE));
+		System.out.println("Integer.BYTES:" + Integer.BYTES);
+		System.out.println("Integer.SIZE:" + Integer.SIZE);
+		System.out.println();
+		
+		long_var = Long.MAX_VALUE;
+		long_var = Long.MIN_VALUE;
+		long_var = Long.BYTES;
+		long_var = Long.SIZE;
+		System.out.println("Long.MAX_VALUE:" + Long.MAX_VALUE);
+		System.out.println("Long.toHexString(Long.MAX_VALUE):0x" + Long.toHexString(Long.MAX_VALUE));
+		System.out.println("Long.toBinaryString(Long.MAX_VALUE)0b:" + Long.toBinaryString(Long.MAX_VALUE));
+		System.out.println("Long.toOctalString(Long.MAX_VALUE):0" + Long.toOctalString(Long.MAX_VALUE));
+		System.out.println("Long.MIN_VALUE:" + Long.MIN_VALUE);
+		System.out.println("Long.toHexString(Long.MIN_VALUE):0x" + Long.toHexString(Long.MIN_VALUE));
+		System.out.println("Long.toBinaryString(Long.MIN_VALUE)0b:" + Long.toBinaryString(Long.MIN_VALUE));
+		System.out.println("Long.toOctalString(Long.MIN_VALUE):0" + Long.toOctalString(Long.MIN_VALUE));
+		System.out.println("Long.BYTES:" + Long.BYTES);
+		System.out.println("Long.SIZE:" + Long.SIZE);
+		System.out.println();
+		
+		float_var = Float.MAX_VALUE;
+		float_var = Float.NEGATIVE_INFINITY;
+		float_var = Float.MIN_VALUE;
+		float_var = Float.MIN_NORMAL;
+		float_var = Float.POSITIVE_INFINITY;
+		float_var = Float.MAX_EXPONENT;
+		float_var = Float.MIN_EXPONENT;
+		float_var = Float.NaN;
+		float_var = Float.BYTES;
+		float_var = Float.SIZE;
+		System.out.println("Float.MAX_VALUE:"+Float.MAX_VALUE);
+		System.out.println("Float.NEGATIVE_INFINITY:"+Float.NEGATIVE_INFINITY);
+		System.out.println("Float.MIN_VALUE:"+Float.MIN_VALUE);
+		System.out.println("Float.MIN_NORMAL:"+Float.MIN_NORMAL);
+		System.out.println("Float.POSITIVE_INFINITY:"+Float.POSITIVE_INFINITY);
+		System.out.println("Float.MAX_EXPONENT:"+Float.MAX_EXPONENT);
+		System.out.println("Float.MIN_EXPONENT:"+Float.MIN_EXPONENT);
+		System.out.println("Float.NaN:"+Float.NaN);
+		System.out.println("Float.BYTES:"+Float.BYTES);
+		System.out.println("Float.SIZE:"+Float.SIZE);
+		System.out.println();
+		
+		double_var = Double.MAX_VALUE;
+		double_var = Double.NEGATIVE_INFINITY;
+		double_var = Double.MIN_VALUE;
+		double_var = Double.MIN_NORMAL;
+		double_var = Double.POSITIVE_INFINITY;
+		double_var = Double.MAX_EXPONENT;
+		double_var = Double.MIN_EXPONENT;
+		double_var = Double.NaN;
+		double_var = Double.BYTES;
+		double_var = Double.SIZE;
+		System.out.println("Double.MAX_VALUE:"+Double.MAX_VALUE);
+		System.out.println("Double.NEGATIVE_INFINITY:"+Double.NEGATIVE_INFINITY);
+		System.out.println("Double.MIN_VALUE:"+Double.MIN_VALUE);
+		System.out.println("Double.MIN_NORMAL:"+Double.MIN_NORMAL);
+		System.out.println("Double.POSITIVE_INFINITY:"+Double.POSITIVE_INFINITY);
+		System.out.println("Double.MAX_EXPONENT:"+Double.MAX_EXPONENT);
+		System.out.println("Double.MIN_EXPONENT:"+Double.MIN_EXPONENT);
+		System.out.println("Double.NaN:"+Double.NaN);
+		System.out.println("Double.BYTES:"+Double.BYTES);
+		System.out.println("Double.SIZE:"+Double.SIZE);
+		System.out.println();
+		
+		boolean_var = Boolean.TRUE;
+		boolean_var = Boolean.FALSE;
+		System.out.println("Boolean.TRUE:" + Boolean.TRUE);
+		System.out.println("Boolean.FALSE:" + Boolean.FALSE);
+		
+		//字符类型的类常量很多，在需要使用时再进行查询或学习。
+		//char_var = Character.XXXXXXX
 		
 	}
 	
