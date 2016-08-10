@@ -2,10 +2,8 @@ package com.shenxiuguo.QA.javafx.tree;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TreeView;
 import javafx.stage.Stage;
 
 /**

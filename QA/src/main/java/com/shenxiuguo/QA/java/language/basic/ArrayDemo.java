@@ -15,8 +15,6 @@ public class ArrayDemo {
 	 * 	2. int int_array_2[];
 	 */
 	public static void arrayDeclaring() {
-		int[] int_array_1;
-		int int_array_2[];
 	}
 	
 	/**
@@ -29,9 +27,6 @@ public class ArrayDemo {
 		//error 该种赋值方法只能在声明的时使用
 		//int_array_1 = { 1, 2 };
 		
-		//correct 该种赋值方法只能在声明的时使用
-		int[] int_array_2 = {1, 2};
-		
 		int[][] int2_array_1;
 		int2_array_1 = new int[10][10];
 		int2_array_1[0] = int_array_1;
@@ -39,9 +34,6 @@ public class ArrayDemo {
 		int[][] int2_array_2;
 		int2_array_2 = new int[10][];
 		int2_array_2[0] = int_array_1;
-		
-		int[][][] int3_array_1;
-		int3_array_1 = new int[10][][];
 	}
 	
 	/**

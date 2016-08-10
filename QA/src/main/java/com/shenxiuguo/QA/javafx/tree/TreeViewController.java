@@ -3,19 +3,18 @@ import java.io.File;
 
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.TreeCell;
 import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.util.Callback;
 
 public class TreeViewController {
 	
 	private final Image dirIconImage = new Image(getClass().getResource("dir-icon.png").toString());
 	private final Image fileIconImage = new Image(getClass().getResource("file-icon.png").toString());
 
-    @FXML
+    @SuppressWarnings("rawtypes")
+	@FXML
     private TreeView treeView;
 
     @FXML

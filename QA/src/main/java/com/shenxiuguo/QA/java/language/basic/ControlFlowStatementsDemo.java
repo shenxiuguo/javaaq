@@ -102,6 +102,7 @@ public class ControlFlowStatementsDemo {
 		}
 	}
 
+	@SuppressWarnings("unused")
 	public static void for_break_statement() {
 		int i = 0, j = 0;
 		
@@ -116,6 +117,7 @@ public class ControlFlowStatementsDemo {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	public static void for_continue_statement() {
 		int i = 0, j = 0;
 		

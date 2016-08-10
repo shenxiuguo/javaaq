@@ -21,28 +21,15 @@ public class Variables {
 	 * Class Variables (Static Fields) 
 	 * 类的变量
 	 */
+	@SuppressWarnings("unused")
 	private static File cls_var;
-	
-	/**
-	 * Instance Variables (Non-Static Fields)
-	 * 对象实例变量
-	 */
-	private File instance_var;
 	
 	/**
 	 * Local Variables 
 	 * 本地变量
 	 */
+	@SuppressWarnings("unused")
 	private void functionForLocalVariable() {
 		File local_var;
-	}
-	
-	/**
-	 * @param parameters
-	 * Parameters 
-	 * 参数变量
-	 */
-	private void functionForParameters(File parameters) {
-		
 	}
 }

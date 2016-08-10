@@ -1,7 +1,5 @@
 package com.shenxiuguo.QA.java.language.basic;
 
-import java.math.BigInteger;
-
 /**
  * 八类基本数据类型
  * 1.byte<br/>
