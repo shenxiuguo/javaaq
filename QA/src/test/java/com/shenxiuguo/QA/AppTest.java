@@ -29,7 +29,7 @@ public class AppTest
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigourous Test :-) shenxg test
      */
     public void testApp()
     {
